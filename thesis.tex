@@ -68,45 +68,29 @@
 %*************************************************************************
 % Frontmatter
 %*************************************************************************
-\include{frontbackmatter/Titlepage}
-\include{frontbackmatter/Titleback}
-%\cleardoublepage\include{frontbackmatter/Dedication}
-%\cleardoublepage\include{frontbackmatter/Foreword}
-\cleardoublepage\include{frontbackmatter/Declaration}
-\cleardoublepage\include{frontbackmatter/AbstractEN}
-\cleardoublepage\include{frontbackmatter/AbstractDE}
-%\cleardoublepage\include{frontbackmatter/Publications}
-%\cleardoublepage\include{frontbackmatter/Acknowledgments}
-\cleardoublepage\include{frontbackmatter/Contents}
-\cleardoublepage\include{frontbackmatter/Figures}
-\cleardoublepage\include{frontbackmatter/Tables}
-\cleardoublepage\include{frontbackmatter/Listings}
-\cleardoublepage\include{frontbackmatter/Acronyms}
+\include{Thesis/1_Title/Titlepage}
+\include{Thesis/1_Title/Titleback}
+\include{Thesis/2_Frontmatter/Contents}
 %*************************************************************************
 % Mainmatter
 %*************************************************************************
 \cleardoublepage
 \pagestyle{scrheadings}
 \pagenumbering{arabic}
-% Always use \cleardoublepage before \part{...}.
 \cleardoublepage
-\part{Thesis}\label{pt:thesis}
-\include{chapters/examples/chapter01}
-\include{chapters/examples/chapter02}
-\include{chapters/examples/chapter03}
+\include{Thesis/5_Additional/expose}
+%\part{Expose}\label{pt:expose}
+% Always use \cleardoublepage before \part{...}.
+%\cleardoublepage
+%\part{Thesis}\label{pt:thesis}
 %*************************************************************************
 % Backmatter
 %*************************************************************************
-\appendix
 %\renewcommand{\thechapter}{\alph{chapter}}
-\cleardoublepage
-\part{Appendix}
-\include{chapters/examples/appendix01}
-\include{chapters/examples/appendix02}
 %*************************************************************************
 % Other Stuff in the Back
 %*************************************************************************
-\cleardoublepage\include{frontbackmatter/Bibliography}
+\cleardoublepage\include{Thesis/4_Backmatter/Bibliography}
 %*************************************************************************
 % Game Over: Restore, Restart, or Quit?
 %*************************************************************************
