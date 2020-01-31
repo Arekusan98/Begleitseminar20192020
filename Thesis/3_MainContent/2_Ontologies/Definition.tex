@@ -5,25 +5,35 @@ Ontologien:
 	Wissen in digitalisierter und formaler Form zwischen Anwendungsprogrammen und Diensten auszutauschen
 	Allgemeinwissen und Wissen über sehr spezielle Themengebiete und Vorgänge
 	
-	Teil der Wissensrepräsentation im Teilgebiet künstliche Intelligenz
-	Netzwerk von Informationen mit logischen Relationen
-	Explizite Formale Spezifikation einer Konzeptualisierung
-	Hohe sematische Ausdrucksstärke
+	In the context of computer and information sciences, an ontology defines a set of representational primitives with which to model a domain of knowledge or discourse.
+	
+	
+	Hohe semantische Ausdrucksstärke
 		Komplexe Datenmodelle oder Wissenrepräsentationen darstellen
 		z.B.: In kollaborativen Projekten der Konsens einer großen Anzahl von Partnern formalisieren
 		
+
+		https://gi.de/informatiklexikon/ontologien
+
+		Für die Entwicklung und Prüfung von Ontologien sind in den letzten Jahren eine Reihe von Sprachen, Methoden und Werkzeugen entstanden bzw. verfügbar gemacht worden. Im Zusammenhang mit dem Semantik Webansatz sind hier vor allem XML (Extensible Markup Language) und RDF (Resource Description Framework) zu nennen: XML für die Annotierung und Strukturbeschreibung von Daten und Dokumenten, RDF für die Möglichkeit, Ressourcen durch Eigenschaften zu beschreiben und diesen Werte - darunter auch Verweise auf andere Ressourcen - zuzuordnen. Dieser Ansatz fußt auf der bekannten Grundidee, semantische Netze als Graphen aufzufassen.
+
+
+https://gi.de/informatiklexikon/ontologien
+
+	Gespeichertes Wissen zu Nutze machen -> auf Grund und Kontextwissen des jeweiligen wissensbereiches zurückgreifen
+	Automaten Such-, Kommunkations und entscheidungsaufgaben in Bezug auf das gespeicherte Wissen übernehmen oder Daten austauschen (Metadaten), benöitigen dazu repräsentation der zugrunde liegenden Begriffe. -> Ontologie
+
+	Definition: Explizite formale Spezifikation einer gemeinsamen Konzeptualisierung
+	Ontologie beschreibt Wissensbereich mit Hilfe einer standardiesierenden Terminiologie sowie Beziehungen bzw. Ableitungsregeln zwischen den definierten Begriffen. 
+
+	drei Stufen von Ontologien: (1)allgemeine, Bereichsübergreifende, "top level ontologies", (2) auf bestimmte Anwendungsbereiche bezogene "domain ontologies", (3) bekannte konzeptuelle Daten- und Klassenmodelle, die lediglich mit dem modischen Namen \"Ontologie\" aufgewertet werden sollen.
+
+	Ein Ontologie-Entwurf kann grundsätzlich durch einen induktiven Ansatz (Bildung größerer Ontologien aus mehreren kleinen "leichtgewichtigen" durch Verbindung - "merging") oder durch einen deduktiven Ansatz (Festlegung allgemeiner Konzepte und Regeln durch ein Gremium oder Konsortium, Überprüfung, Standardisierung und anschließende Spezialisierung für Teilbereiche) geschehen.
+
+
 		
-Exkurs Semantic Web:
-	Verknüpfung von Begriffen untereinander
-		z.B.: Bremen in einem Dokument um die Information ergänzen, dass es eine Stadt ist. Diese Information strukturiert die vorkommenden Daten. 
-		Menschen erfassen Zusatzinformationen aus dem Kontext (Ein Text über die Stadt Bremen -> Das Wort Bremen taucht auf -> die Stadt ist gemeint)
-		Maschinen muss diese Verknüpfung erst beigebracht werden -> Ontologien (maschinenlesbare Daten; insbesondere RDF)
-	Giant Global Graph
-		Sämtliche Dinge von Interesse werden identifiziert und mit eienr eindeutigen Adresse versehen
-		Knoten (Dinge) und Kanten (Beziehungen) 
-		Gesamtheit aller Kanten entspricht dem globalen Graphen
-		
-		
+
+AUFBAU		
 	Knotenaufbau nach Nomen, Verb, Nomen bzw Subjekt Prädikat Objekt
 	Subjekt ist Knoten
 	Prädikat ist Kanten
@@ -32,20 +42,7 @@ Exkurs Semantic Web:
 		Im Semantic Web ungefähr so:
 			wikipedia.org/entity123 -> schema.org/name -> "Dresden"
 			
-	
-Zweck von Ontologien
-	Strukturierung und Datenaustausch
-	Wissensstände zusammenführen
-	In Wissenbeständen suchen und Einträge editieren
-	Neue Instanzen aus Wissensständen generieren
-	
-	Meiste Anwendungen kennen keine individuellen Instanzen 
-	Beschränken sich auf wissenschaftliche Zwecke zur Systematisierung der Nutzung von Begriffsräumen. Z.B. Genetische Daten in der Bioinformatik oder räumliche Informationen in der Geosemantik
-	Potentiale in der Humanmedizin: Ontologien als Typen zur Instantiierung von individuellen Informationskonzeption, wie zum Beispiel die Patientenakte
-	Betriebswirtschaftliche Anwendungssoftware mit Ontologien
-	
-	Brückenfunktion zwischen verschiedenen Klassifikationen und zu benachbarten Begriffswelten liegt die Stärke ontologischer Konzepte: Sie erlauben das Ablösen der konzeptionellen Arbeit von festen Textvorlagen und Textbausteinen und den Übergang zu wechselnden Zusammenstellungen halbfertrig formulierte Texte zum Abfassen individueller Texte
-	
+VORTEILE/NUTZEN	
 Aus den Regeln einer Ontologie können weitere Schlussfolgerungen / Regeln entnommen werden
 	Zum Beispiel: Bekannt ist: Frankfurt ist in Hessen. Hessen ist in Deutschland. In Deutschland spricht man Deutsch -> Frankfurt ist in Deutschland. In Frankfurt spricht man Deutsch.
 	usw.
@@ -56,21 +53,27 @@ Aus den Regeln einer Ontologie können weitere Schlussfolgerungen / Regeln entno
 	
 	Relationen über Relationen -> Komplex, daher nicht weit verbreitet, allerdings Alleinstellungsmerkmal der Ontologien gegenüber anderer Begriffssysteme.
 	
-Bestandteile einer Ontologie
-	Begriffe (Concepts): Die Beschreibung gemeinsamer Eigenschaften wird als Begriff definiert (z.B.: "Stadt" oder "Land"). Begriffe werden auch als Klassen bezeichnet. Diese können in einer Klassenstruktur mit Über- und Unterklassen angeordnet werden.
+BESTANDTEILE EINER ONTOLOGIE 
+	
+ 	https://de.wikipedia.org/wiki/Ontologie\_Informatik
+
+    Begriffe (Concepts): Die Beschreibung gemeinsamer Eigenschaften wird als Begriff definiert (z.B.: "Stadt" oder "Land"). Begriffe werden auch als Klassen bezeichnet. Diese können in einer Klassenstruktur mit Über- und Unterklassen angeordnet werden.
 	Typen(Types): Typen repräsentieren Objekttypen in der Ontologie und stellen die zur Verfügung stehenden Typen in Klassen dar. Diese werden anhand vorher definierter Begriffe erzeugt und als Types bezeichnet. (z.B.: Stadt als Type des Begriffs topologisches Element der Klasse Punkte oder Fluss als Typ des Begriffs topologisches Element der Klasse Linien
 	Instanzen(Individuals):Instanzen repräsentieren Objekte in der Ontologie. Sie werden anhand vorher definierter Begriffe erzeugt und auch als Individuals bezeichnet (z.B.: München als Instanz des Begriffs topologiscer ort vom Typ Stadt oder Deutschland als Instanz des Begriffs topologischer Ort des Typs Land)
 	Relationen(Relations):Relationen werden verwendet, um zu beschreiben, welche Beziehungen zwischen den Instanzen bestehen (z.B.: Stadt München liegt in Land Deutschland) und auch als Eigenschaften bezeichnet.
 	Vererbung(Inheritance): Es ist möglich, Relationen und Eigenschaften der Begriffe zu vererben. Dabei werden alle Eigenschaften an das erbende Element weitergegeben. Mehrfachvererbung bei Begriffen ist grundsätzlich möglich. Durch den Einsatz von Transitivität können Instanzen einer Bottom-Up-Hierarchie aufgebaut werden. Dabei spricht man von Delegation.
 	Axiome(Axioms): Axiome sind Aussagen innerhalb der Ontologie, die immer wahr sind. Diese werden normalerweise dazu verwendet, Wissen zu repräsentieren, das nicht aus anderen Begriffen abgeleitet werden kann (z.B.: zwischen Amerika und europa existiert keine Zugverbindung.)
 	
-Ontologietypen
+ONTOLOGIETYPEN
 	Lightweight-Ontologien beinhalten Begriffe, Taxonomien und Beziehungen zwischen Begriffen und Eigenschaften, welche diese beschreiben.
 	Heavyweight-Ontologien sind eine Erweiterung von Lightweight-Ontologien und fügen diesen Axiome und Einschränkungen hinzu, wodurch die beabsichtigte Bedeutung einzelner Aussagen innerhalb der Ontologie klarer wird.
 	
 	
-	
-Definition nach Tom Gruber
+	https://tomgruber.org/writing/ontology-definition-2007.htm
+	DEFINITION
+	In the context of computer and information sciences, an ontology defines a set of representational primitives with which to model a domain of knowledge or discourse.  The representational primitives are typically classes (or sets), attributes (or properties), and relationships (or relations among class members).  The definitions of the representational primitives include information about their meaning and constraints on their logically consistent application.  In the context of database systems, ontology can be viewed as a level of abstraction of data models, analogous to hierarchical and relational models, but intended for modeling knowledge about individuals, their attributes, and their relationships to other individuals.  Ontologies are typically specified in languages that allow abstraction away from data structures and implementation strategies; in practice, the languages of ontologies are closer in expressive power to first-order logic than languages used to model databases.  For this reason, ontologies are said to be at the "semantic" level, whereas database schema are models of data at the "logical" or "physical" level.  Due to their independence from lower level data models, ontologies are used for integrating heterogeneous databases, enabling interoperability among disparate systems, and specifying interfaces to independent, knowledge-based services.  In the technology stack of the Semantic Web standards [1], ontologies are called out as an explicit layer.  There are now standard languages and a variety of commercial and open source tools for creating and working with ontologies.
+
+Definition nach Tom Gruber (https://tomgruber.org/writing/ontology-definition-2007.htm)
 	Satz repräsentativer Primitiver mit denen ein Bereich des Wissens/der Diskussion modelliert werden kann.
 	Klassen, Attribute und Beziehungen stellen die repräsentativen Primitiven dar
 	Level der Abstraktion von Datenmodellen, analog zu hierachischen und relationalen Modellen, allerdings mit Fokus auf das darstellen von Wissen über Instanzen, ihre Attribute und deren Beziehungen.
