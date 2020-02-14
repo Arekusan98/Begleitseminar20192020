@@ -1,42 +1,71 @@
 \section{Einsatzbereiche}
-Zweck von Ontologien
-	Strukturierung und Datenaustausch
-	Wissensstände zusammenführen
-	In Wissenbeständen suchen und Einträge editieren
-	Neue Instanzen aus Wissensständen generieren
-	
-	Meiste Anwendungen kennen keine individuellen Instanzen 
-	Beschränken sich auf wissenschaftliche Zwecke zur Systematisierung der Nutzung von Begriffsräumen. Z.B. Genetische Daten in der Bioinformatik oder räumliche Informationen in der Geosemantik
-	Potentiale in der Humanmedizin: Ontologien als Typen zur Instantiierung von individuellen Informationskonzeption, wie zum Beispiel die Patientenakte
-	Betriebswirtschaftliche Anwendungssoftware mit Ontologien
-	
-	Brückenfunktion zwischen verschiedenen Klassifikationen und zu benachbarten Begriffswelten liegt die Stärke ontologischer Konzepte: Sie erlauben das Ablösen der konzeptionellen Arbeit von festen Textvorlagen und Textbausteinen und den Übergang zu wechselnden Zusammenstellungen halbfertrig formulierte Texte zum Abfassen individueller Texte
-	
-	https://gi.de/informatiklexikon/ontologien
-
-	drei Anwendungsfelder Kommunikation, automatisches Schließen und Repräsentation sowie Wiederverwendung von Wissen
-
-	Sollen zwei Programme (z.B. Web-Suchmaschinen oder Software-Agenten)miteinander kommunizieren, so müssen sie entweder selbst die Interpretationsvorschrift für die Daten in sich tragen (sind also datenabhängig), oder aber sie liefern diese in Form von Metadaten aus einer beiden Seiten zugänglichen Ontologie mit.
-
-	Ontologien sind bereits für verschiedene Wissensgebiete entwickelt worden, so z.B. für Entscheidungsunterstützungssysteme (Decision Support Systems, DSS) oder für das Wissensmanagement . Im kommerziellen Bereich spielen sie - z.B. als Grundlage für E-Business-Systeme - bereits eine wichtige Rolle. Für den Bereich der Informationssysteme hat die IFIP-Arbeitsgruppe FRISCO (Framework of Information System Concepts) ein umfassendes konzeptuelles Rahmenwerk vorgeschlagen, das auch als allgemeine Basis für weitere, spezialisierte Ontologien dienen konnten.
-
-	In der Softwaretechnik gewinnen Ontologien zz. in zweierlei Hinsicht an Bedeutung:
-
-Ontologien als Hilfsmittel und Wissensfundus bei der Software-Entwicklung. Will man die Idee von Web-Services, d.h. im Web verteilten, wieder- und weiterverwendbaren Anwendungssystemen oder -komponenten verwirklichen, so müssen diese auf einem von allen potenziellen Benutzern getragenen gemeinsamen Struktur- und Begriffsverständnis des betreffenden Anwendungsgebiets beruhen. 
-Ontologien können hier dabei helfen, den Anteil an wiederverwendbaren Ergebnissen (z.B. Konzepten oder Modellen) in den sog. Frühen "Phasen" deutlich zu erhöhen.
-Softwaretechnik als Gegenstand einer Ontologie, d.h. als standardisiert zu beschreibendes Wissensgebiet. Für eine solche Software Engineering Ontology hat die SWEBoK-Initiative (Software Engineering Body of Knowledge) wertvolle Vorarbeit geleistet. In diesem Zusammenhang sind auch deutschsprachige Arbeiten an einem "Begriffsnetz" für die Softwaretechnik zu nennen.
-SEMANTIC WEB und ONTOLOGIEN 
-
-
-https://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf
-	Verknüpfung von Begriffen untereinander
-		z.B.: Bremen in einem Dokument um die Information ergänzen, dass es eine Stadt ist. Diese Information strukturiert die vorkommenden Daten. 
+\section*{Zweck von Ontologien}
+\begin{itemize}
+	\item Strukturierung und Datenaustausch
+	\item Wissensstände zusammenführen
+	\item In Wissenbeständen suchen und Einträge editieren
+	\item Neue Instanzen aus Wissensständen generieren
+	\item Verknüpfung von Begriffen untereinander
+	\begin{itemize}
+		\item z.B.: Bremen in einem Dokument um die Information ergänzen, dass es eine Stadt ist. Diese Information strukturiert die vorkommenden Daten. 
 		Menschen erfassen Zusatzinformationen aus dem Kontext (Ein Text über die Stadt Bremen -> Das Wort Bremen taucht auf -> die Stadt ist gemeint)
 		Maschinen muss diese Verknüpfung erst beigebracht werden -> Ontologien (maschinenlesbare Daten; insbesondere RDF)
-	Giant Global Graph
-		Sämtliche Dinge von Interesse werden identifiziert und mit eienr eindeutigen Adresse versehen
-		Knoten (Dinge) und Kanten (Beziehungen) 
-		Gesamtheit aller Kanten entspricht dem globalen Graphen
+	\end{itemize}
+	\item Giant Global Graph - Sämtliche Dinge von Interesse werden identifiziert und mit einer eindeutigen Adresse versehen
+	\begin{itemize}
+		\item Knoten (Dinge) und Kanten (Beziehungen) 
+		\item Gesamtheit aller Kanten entspricht dem globalen Graphen
+		\item https://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf
+	\end{itemize}	
+	\item Ontologien als Hilfsmittel und Wissensfundus bei der Software-Entwicklung. 
+	\begin{itemize}
+		\item Will man die Idee von Web-Services, d.h. im Web verteilten, wieder- und weiterverwendbaren Anwendungssystemen oder -komponenten verwirklichen, so müssen diese auf einem von allen potenziellen Benutzern getragenen gemeinsamen Struktur- und Begriffsverständnis des betreffenden Anwendungsgebiets beruhen. 
+		\item Anteil an wiederverwendbaren Ergebnissen (z.B. Konzepten oder Modellen) in den sog. Frühen "Phasen" deutlich zu erhöhen
+	\end{itemize}	
+\end{itemize}
+	
+\section*{Anwendungsbereiche}
+\begin{itemize}
+	\item Systematisierung der Nutzung von Begriffsräumen in der Bioinformatik
+	\item Räumliche Informationen in der Geosemantik
+	\item In Wissenbeständen suchen und Einträge editieren
+	\item Ontologien als Typen zur Instantiierung von individuellen Informationskonzeption, wie zum Beispiel die Patientenakte (in healthcare)
+	\item Betriebswirtschaftliche Anwendungssoftware mit Ontologien
+	\item Sollen zwei Programme (z.B. Web-Suchmaschinen oder Software-Agenten)miteinander kommunizieren, so müssen sie entweder selbst die Interpretationsvorschrift für die Daten in sich tragen (sind also datenabhängig), oder aber sie liefern diese in Form von Metadaten aus einer beiden Seiten zugänglichen Ontologie mit.
+	\item Entscheidungsunterstützungssysteme (Decision Support Systems, DSS)
+\end{itemize}
 
-		https://gi.de/informatiklexikon/ontologien
-Besonderes, weltweites Interesse finden Ontologien in jüngster Zeit aufgrund der Semantic-Web-Initiative des WWW-Schöpfers Tim Berners-Lee und seiner Kollegen. Sie beruht auf der Grundidee, Web-Dokumente (jeglicher Größenordnung) mit "Semantik" in Form von Metadaten ("tags") zu versehen, die ihren Inhalt näher beschreiben, und diese durch Ableitungsregeln ("inference rules") miteinander zu verknüpfen. Damit sollen Suchmaschinen und andere elektronische Mechanismen wie Agenten unterstützt werden, benötigte Informationen gezielt und effizient zu finden und miteinander zu verbinden. Ontologien dienen dazu, die dafür benötigten Grundlagen an Metadaten und Verknüpfungsregeln zu liefern. Das bedeutet, dass sich z.B. zwei Agenten über ihre Aufgaben und Ergebnisse mit Hilfe einer beiden verfügbaren Ontologie verständigen können.
+\section*{Anwendungskonzepte}
+\begin{itemize}
+	\item Kommunikation, 
+	\item automatisches Schließen und Repräsentation 
+	\item Wiederverwendung von Wissen
+\end{itemize}
+https://gi.de/informatiklexikon/ontologien
+
+\section*{Semantic Web}
+\begin{itemize}
+	\item Grundidee, Web Dokumente mit semantik in Form von Metadaten zu versehen
+	\item Metadaten beschreiben Inhalt
+	\item Ableitungsregeln verknüpfen dann Inhalte miteinander
+	\item Suchmaschinen oder andere elektronische Mechanismen wie Agenten unterstützen
+	\item Informationen gezielt und effizient finden und verbinden
+	\item Ontologie für die benötigten Grundlagen an Metadaten und Verknüpfungsregeln
+	\item Verständigung zwischen z.B. Agenten über Aufgaben und Ergebnisse über gemeinsame Ontologie
+\end{itemize}
+https://gi.de/informatiklexikon/ontologien
+
+\section*{Nutzen nach W3C}
+\begin{itemize}
+	\item Datenintegration verbessern bei bspw. Mehrdeutigkeiten verwendeter Begriffe oder falls Extrakenntnisse zu neuen Verknüpfungen verhelfen
+	\item Im Gesundheitssektor:
+	\begin{itemize}
+		\item Repräsentation von Wissen über Symptome, Krankheiten und Behandlungen
+		\item Medikamenten, Dosierungen udn Allergien
+		\item Kombination dieser Information mit Patientendaten: z.B. Entscheidungsunterstützungssysteme für mögliche Behandlungen, Effektivität von Medikamenten überwachen, usw.
+	\end{itemize}
+	\item Auch zum Organisieren von Wissen geeignet
+	\item Bibliotheken, Museen, Zeitschriften usw die viele Artikel verwalten müssen, die inhaltlich organisiert werden
+	\item Die Komplexität der Ontologie hängt vom Einsatzgebiet und den Anforderungen ab
+\end{itemize}
+https://www.w3.org/standards/semanticweb/ontology
