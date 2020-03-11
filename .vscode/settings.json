@@ -7,5 +7,12 @@
         "ngerman",
         "pletikosić"
     ],
-    "cSpell.language": ",de"
+    "cSpell.language": ",de",
+    "cSpell.words": [
+        "Cross",
+        "Inference",
+        "Query",
+        "Referencing",
+        "Refinement"
+    ]
 }
