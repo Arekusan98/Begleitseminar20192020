@@ -70,7 +70,7 @@
 %*************************************************************************
 \include{Thesis/1_Title/Titlepage}
 \include{Thesis/1_Title/Titleback}
-%\include{Thesis/2_Frontmatter/expose}
+\include{Thesis/2_Frontmatter/Abstract}
 \include{Thesis/2_Frontmatter/Contents}
 %*************************************************************************
 % Mainmatter
@@ -95,11 +95,12 @@
 %*************************************************************************
 % Backmatter
 %*************************************************************************
-%\renewcommand{\thechapter}{\alph{chapter}}
+\renewcommand{\thechapter}{\alph{chapter}}
+\cleardoublepage
+\include{Thesis/4_Backmatter/Bibliography}
 %*************************************************************************
 % Other Stuff in the Back
 %*************************************************************************
-\cleardoublepage\include{Thesis/4_Backmatter/Bibliography}
 %*************************************************************************
 % Game Over: Restore, Restart, or Quit?
 %*************************************************************************
