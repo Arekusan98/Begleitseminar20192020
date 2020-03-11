@@ -1,71 +1,7 @@
 \section{Einsatzbereiche}
-\section*{Zweck von Ontologien}
-\begin{itemize}
-	\item Strukturierung und Datenaustausch
-	\item Wissensstände zusammenführen
-	\item In Wissenbeständen suchen und Einträge editieren
-	\item Neue Instanzen aus Wissensständen generieren
-	\item Verknüpfung von Begriffen untereinander
-	\begin{itemize}
-		\item z.B.: Bremen in einem Dokument um die Information ergänzen, dass es eine Stadt ist. Diese Information strukturiert die vorkommenden Daten. 
-		Menschen erfassen Zusatzinformationen aus dem Kontext (Ein Text über die Stadt Bremen -> Das Wort Bremen taucht auf -> die Stadt ist gemeint)
-		Maschinen muss diese Verknüpfung erst beigebracht werden -> Ontologien (maschinenlesbare Daten; insbesondere RDF)
-	\end{itemize}
-	\item Giant Global Graph - Sämtliche Dinge von Interesse werden identifiziert und mit einer eindeutigen Adresse versehen
-	\begin{itemize}
-		\item Knoten (Dinge) und Kanten (Beziehungen) 
-		\item Gesamtheit aller Kanten entspricht dem globalen Graphen
-		\item https://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf
-	\end{itemize}	
-	\item Ontologien als Hilfsmittel und Wissensfundus bei der Software-Entwicklung. 
-	\begin{itemize}
-		\item Will man die Idee von Web-Services, d.h. im Web verteilten, wieder- und weiterverwendbaren Anwendungssystemen oder -komponenten verwirklichen, so müssen diese auf einem von allen potenziellen Benutzern getragenen gemeinsamen Struktur- und Begriffsverständnis des betreffenden Anwendungsgebiets beruhen. 
-		\item Anteil an wiederverwendbaren Ergebnissen (z.B. Konzepten oder Modellen) in den sog. Frühen "Phasen" deutlich zu erhöhen
-	\end{itemize}	
-\end{itemize}
-	
-\section*{Anwendungsbereiche}
-\begin{itemize}
-	\item Systematisierung der Nutzung von Begriffsräumen in der Bioinformatik
-	\item Räumliche Informationen in der Geosemantik
-	\item In Wissenbeständen suchen und Einträge editieren
-	\item Ontologien als Typen zur Instantiierung von individuellen Informationskonzeption, wie zum Beispiel die Patientenakte (in healthcare)
-	\item Betriebswirtschaftliche Anwendungssoftware mit Ontologien
-	\item Sollen zwei Programme (z.B. Web-Suchmaschinen oder Software-Agenten)miteinander kommunizieren, so müssen sie entweder selbst die Interpretationsvorschrift für die Daten in sich tragen (sind also datenabhängig), oder aber sie liefern diese in Form von Metadaten aus einer beiden Seiten zugänglichen Ontologie mit.
-	\item Entscheidungsunterstützungssysteme (Decision Support Systems, DSS)
-\end{itemize}
+Durch die eben aufgezeigten Eigenschaften von Ontologien ergeben sich verschiedene Möglichkeiten, diese einzusetzen. Zum einen werden Ontologien verwendet, um Wissen zu Strukturieren und Datenaustausch zu ermöglichen. Außerdem sind sie nicht auf niedrige Datentypen angewiesen und ermöglichen so das Zusammenführen von umfangreichen heterogenen Daten. Sie erleichtern das Suchen innerhalb von Wissensbeständen und damit auch das Editieren einzelner Informationen. Ebenso können Begriffe miteinander verknüpft werden (the semantic web american scientific), wodurch beispielsweise Synonyme bei einer Suche berücksichtigen werden können, gleichzeitig aber auch homonyme ausgeschlossen werden können. (wikipedia semantische suche)
+Eingesetzt werden Ontologien beispielsweise im Bereich der Meeresbiologie (https://projects.ics.forth.gr/isl/MarineTLO/) um Wissen über Meerestiere zu sammeln und die Forschung über diese Spezies und Biodiversitäten zu unterstützen. Ebenso werden im medizinischen Bereich Ontologien eingesetzt, um Symptome, Medikamente und Patientendaten zu verknüpfen und dadurch beispielsweise Diagnose und Therapiemöglichkeiten suchen zu können und das Personal zu unterstützen. (informatiklexikon).\\
 
-\section*{Anwendungskonzepte}
-\begin{itemize}
-	\item Kommunikation, 
-	\item automatisches Schließen und Repräsentation 
-	\item Wiederverwendung von Wissen
-\end{itemize}
-https://gi.de/informatiklexikon/ontologien
-
-\section*{Semantic Web}
-\begin{itemize}
-	\item Grundidee, Web Dokumente mit semantik in Form von Metadaten zu versehen
-	\item Metadaten beschreiben Inhalt
-	\item Ableitungsregeln verknüpfen dann Inhalte miteinander
-	\item Suchmaschinen oder andere elektronische Mechanismen wie Agenten unterstützen
-	\item Informationen gezielt und effizient finden und verbinden
-	\item Ontologie für die benötigten Grundlagen an Metadaten und Verknüpfungsregeln
-	\item Verständigung zwischen z.B. Agenten über Aufgaben und Ergebnisse über gemeinsame Ontologie
-\end{itemize}
-https://gi.de/informatiklexikon/ontologien
-
-\section*{Nutzen nach W3C}
-\begin{itemize}
-	\item Datenintegration verbessern bei bspw. Mehrdeutigkeiten verwendeter Begriffe oder falls Extrakenntnisse zu neuen Verknüpfungen verhelfen
-	\item Im Gesundheitssektor:
-	\begin{itemize}
-		\item Repräsentation von Wissen über Symptome, Krankheiten und Behandlungen
-		\item Medikamenten, Dosierungen udn Allergien
-		\item Kombination dieser Information mit Patientendaten: z.B. Entscheidungsunterstützungssysteme für mögliche Behandlungen, Effektivität von Medikamenten überwachen, usw.
-	\end{itemize}
-	\item Auch zum Organisieren von Wissen geeignet
-	\item Bibliotheken, Museen, Zeitschriften usw die viele Artikel verwalten müssen, die inhaltlich organisiert werden
-	\item Die Komplexität der Ontologie hängt vom Einsatzgebiet und den Anforderungen ab
-\end{itemize}
-https://www.w3.org/standards/semanticweb/ontology
+Ebenso sind Ontologien für das „Semantic Web“ von hoher Bedeutung, da sie die Verknüpfung zwischen verschiedenen Seiten und Begriffen ermöglichen (semantic web) und semantische Suchen im Web so überhaupt erst umsetzbar sind. \newline
+Alle Bereiche, in denen es gilt, Entscheidungen anhand von Erfahrung beziehungsweise Wissen zu treffen oder Wissen zu strukturieren, um damit Arbeiten zu können, können Ontologien einsetzen.\newline
+Ebenso kann man also im Bereich des Produkttestens Ontologien einsetzen, um die Kenntnisse über die Vielzahl an Testfällen, die es bei einem größeren Produkt gibt, strukturiert zu bündeln und für semantische Suchen verwendbar zu machen. 

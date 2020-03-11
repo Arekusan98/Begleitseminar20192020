@@ -1,81 +1,14 @@
 \chapter{Ontologien}
 \section{Definition}
-\section*{Ontologie Definition (Stichpunkte)}
-\begin{itemize}
-	\item Begriffe (Concepts) und Beziehungen (Relationships) für die Beschreibung und Darstellung eines Problembereichs
-	\item Allgemeinwissen und Wissen über sehr spezielle Themengebiete und Vorgänge
-	https://www.w3.org/standards/semanticweb/ontology (alles drüber)
-	\item Explizite formale Spezifikation einer gemeinsamen Konzeptualisierung
-	\item "standardiesierende Terminiologie" (wtf) sowie Beziehungen bzw. Ableitungsregeln zwischen den definierten Begriffen
-	\item ggf. stark unterschiedliche Komplexitäten/Größen
-	\item Hohe semantische Ausdrucksstärke (was heißt das??)
-	\item Verschiedene Sprachen/Methoden/Werkzeugen
-	\item	XML und RDF, XML für die Strukturbeschreibung von Daten und Dokumenten, RDF für die Möglichkeit, Ressourcen durch Eigenschaften zu beschreiben und Werte und Verweise auf andere Ressourcen zuzuordnen.
-		(-> ähnlich Datenbank und Objekten/Klassen)
-	\item OWL "Ontologiesprache" - Standard von W3C
-	\item Semantische Netze als Graphen auffassen (was heißt das????)
-\end{itemize}
-	https://gi.de/informatiklexikon/ontologien (alles drüber)
+Ontologien definieren eine Reihe von repräsentativen Primitiven, mit denen ein Wissens- oder Diskursbereich modelliert werden kann. Sie bestehen aus Begriffen und Beziehungen, die einen bestimmten Problembereich darstellen. (gruber) \newline
+Dadurch können Ontologien Kenntnisse und Wissen in einem Bereich auf eine strukturierte und nutzbare Art verfügbar machen. Die vielen Verknüpfungen innerhalb einer Ontologie verleihen ihr eine hohe semantische Ausdrucksstärke. Von vorhandenem Wissen können Rückschlüsse gezogen werden und weitere Beziehungen und Ableitungsregeln ermittelt werden. (informatiklexikon)\newline
+Ontologien lassen sich mit dreiteiligen Tupeln aufbauen, die nach dem Prinzip „Subjekt-Prädikat-Objekt“ formuliert sind. Hierbei entspricht das Subjekt einem Knoten, das Prädikat einer Kante und das Objekt entweder einem Literalwert oder einem weiteren Knoten. So wäre zum Beispiel „Stadt hat Einwohner“ ein Satz, der einer Ontologie im Bereich der Geografie entnommen werden kann, Wobei „Stadt“ und „Einwohner“ jeweils ein Knoten sind und „hat“ die Kante zwischen den Knoten darstellt. (wikipedia uff)\newline
+Um die Stuktur einer Ontologie nutzen zu können, muss sie mit Informationen gefüllt werden. Beispielsweise könnte bei der vorhin erwähnten Geografie Ontologie folgende Wissenssammlung vorliegen.\\
 
-\section*{Definition nach Tom Gruber (noch belegen dass die gut ist)}	
-	\"In the context of computer and information sciences, an ontology defines a set of representational primitives with which to model a domain of knowledge or discourse.  The representational primitives are typically classes (or sets), attributes (or properties), and relationships (or relations among class members).  The definitions of the representational primitives include information about their meaning and constraints on their logically consistent application.  In the context of database systems, ontology can be viewed as a level of abstraction of data models, analogous to hierarchical and relational models, but intended for modeling knowledge about individuals, their attributes, and their relationships to other individuals.  Ontologies are typically specified in languages that allow abstraction away from data structures and implementation strategies; in practice, the languages of ontologies are closer in expressive power to first-order logic than languages used to model databases.  For this reason, ontologies are said to be at the "semantic" level, whereas database schema are models of data at the "logical" or "physical" level.  Due to their independence from lower level data models, ontologies are used for integrating heterogeneous databases, enabling interoperability among disparate systems, and specifying interfaces to independent, knowledge-based services.  In the technology stack of the Semantic Web standards [1], ontologies are called out as an explicit layer.  There are now standard languages and a variety of commercial and open source tools for creating and working with ontologies.\"
-	https://tomgruber.org/writing/ontology-definition-2007.htm
-		
-\section*{Grund für Ontologien: }
-\begin{itemize}
-	\item gespeichertes Wissen zunutze machen -> auf Grund- und Kontextwissen des jeweiligen Wissensbereichs zurückgreifen
-	\item Automaten Such-, Kommunkations und entscheidungsaufgaben in Bezug auf das gespeicherte Wissen übernehmen oder Daten austauschen (Metadaten) -> Repräsentation der zugrunde liegenden Begriffe durch Ontologie
-\end{itemize}
-	https://gi.de/informatiklexikon/ontologien (Alles drüber)
+Kontinent <- ist in – Land <- ist in – Stadt <- wohnt in – Einwohner \\
 
-\section*{Arten von Ontologien:}
-\subsection*{drei Stufen von Ontologien:}
-	\begin{itemize}
-		\item (1)allgemeine, Bereichsübergreifende, "top level ontologies"
-		\item (2) auf bestimmte Anwendungsbereiche bezogene "domain ontologies" \item (3) bekannte konzeptuelle Daten- und Klassenmodelle, die lediglich mit dem modischen Namen \"Ontologie\" aufgewertet werden sollen.			
-		\item Lightweight-Ontologien beinhalten Begriffe, Taxonomien und Beziehungen zwischen Begriffen und Eigenschaften, welche diese beschreiben.
-		wikipedia (nochmal woanders suchen)
-		\item Heavyweight-Ontologien sind eine Erweiterung von Lightweight-Ontologien und fügen diesen Axiome und Einschränkungen hinzu, wodurch die beabsichtigte Bedeutung einzelner Aussagen innerhalb der Ontologie klarer wird. 
-		wikipedia (nochmal woanders suchen)
-	\end{itemize}	
-	https://gi.de/informatiklexikon/ontologien (Alles drüber)
+Wird gefüllt mit \\
 
+Europa <- Deutschland <- Frankfurt <- Max \\
 
-\section*{Wie man Ontologien entwirft:}
-\begin{itemize}
-	\item	induktiven Ansatz (Bildung größerer Ontologien aus mehreren kleinen "leichtgewichtigen" durch Verbindung - "merging") 
-	\item durch einen deduktiven Ansatz (Festlegung allgemeiner Konzepte und Regeln durch ein Gremium oder Konsortium, Überprüfung, Standardisierung und anschließende Spezialisierung für Teilbereiche) 
-\end{itemize}
-https://gi.de/informatiklexikon/ontologien (Alles drüber)
-
-\section*{Wie Ontologien aufgebaut sind:}
-\begin{itemize}
-	\item Knotenaufbau nach Nomen, Verb, Nomen bzw Subjekt Prädikat Objekt
-	\item Subjekt ist Knoten
-	\item Prädikat ist Kanten
-	\item Objekt ist Knoten oder Literalwert
-	\item Im Semantic Web ungefähr so: 
-				wikipedia.org/entity123 -> schema.org/name -> "Dresden"
-\end{itemize}
-wikipedia ontologie beispiel (vielleicht noch ersetzen)
-\subsection*{Wikipedia Liste mit Bestandteilen: (ggf. neue quelle suchen)}
-\begin{itemize}
-	\item Begriffe (Concepts): Die Beschreibung gemeinsamer Eigenschaften wird als Begriff definiert (z.B.: "Stadt" oder "Land"). Begriffe werden auch als Klassen bezeichnet. Diese können in einer Klassenstruktur mit Über- und Unterklassen angeordnet werden.
-	\item Typen(Types): Typen repräsentieren Objekttypen in der Ontologie und stellen die zur Verfügung stehenden Typen in Klassen dar. Diese werden anhand vorher definierter Begriffe erzeugt und als Types bezeichnet. (z.B.: Stadt als Type des Begriffs topologisches Element der Klasse Punkte oder Fluss als Typ des Begriffs topologisches Element der Klasse Linien
-	\item Instanzen(Individuals):Instanzen repräsentieren Objekte in der Ontologie. Sie werden anhand vorher definierter Begriffe erzeugt und auch als Individuals bezeichnet (z.B.: München als Instanz des Begriffs topologiscer ort vom Typ Stadt oder Deutschland als Instanz des Begriffs topologischer Ort des Typs Land)
-	\item Relationen(Relations):Relationen werden verwendet, um zu beschreiben, welche Beziehungen zwischen den Instanzen bestehen (z.B.: Stadt München liegt in Land Deutschland) und auch als Eigenschaften bezeichnet.
-	\item Vererbung(Inheritance): Es ist möglich, Relationen und Eigenschaften der Begriffe zu vererben. Dabei werden alle Eigenschaften an das erbende Element weitergegeben. Mehrfachvererbung bei Begriffen ist grundsätzlich möglich. Durch den Einsatz von Transitivität können Instanzen einer Bottom-Up-Hierarchie aufgebaut werden. Dabei spricht man von Delegation.
-	\item Axiome(Axioms): Axiome sind Aussagen innerhalb der Ontologie, die immer wahr sind. Diese werden normalerweise dazu verwendet, Wissen zu repräsentieren, das nicht aus anderen Begriffen abgeleitet werden kann (z.B.: zwischen Amerika und europa existiert keine Zugverbindung.)
-\end{itemize}
-	https://de.wikipedia.org/wiki/Ontologie\_Informatik
-
-\section*{Wie man mit einer Ontologie arbeitet:}
-\begin{itemize}
-	\item Aus den Regeln einer Ontologie können weitere Schlussfolgerungen / Regeln entnommen werden
-\item	Zum Beispiel: Bekannt ist: Frankfurt ist in Hessen. Hessen ist in Deutschland. In Deutschland spricht man Deutsch -> Frankfurt ist in Deutschland. In Frankfurt spricht man Deutsch. usw.	
-\item Semantische Fehler entdecken (Frankfurt ist nicht in Europa)
-\item Rückschlüsse aus den Daten ziehen (In allen Städten Deutschlands wird man Deutsch sprechen)
-\item fehlendes Wissen aus dem Vorhandenen erkennen (In Hessen spricht man Deutsch)
-\item Ontology Learning: Onotologien automatisch erweitern (Künstliche Intelligenz); Ansonsten werden Ontologien durch menschliche Eingaben erweitert.
-\item	Relationen über Relationen -> Komplex, daher nicht weit verbreitet, allerdings Alleinstellungsmerkmal der Ontologien gegenüber anderer Begriffssysteme.
-\end{itemize}
+Als Ausprägung der jeweiligen Begriffe, wodurch Rückschlüsse gezogen werden können wie z.B.: Max ist Europäer, auch wenn es keine direkte Verbindung zwischen Max und Europa gibt.
