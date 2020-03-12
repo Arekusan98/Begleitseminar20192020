@@ -1,17 +1,19 @@
 \section{Erstellung}
-Hierfür müssen zunächst einmal Testfälle in eine Ontologie umgewandelt werden. Um ein ausreichend großes Beispiel zu bieten, wird hierfür der BAYOOSOFT Access Manager verwendet, für den bereits im Rahmen des dieser Arbeit zugehörigen Praxisprojekts ein Konzept zur Testautomatisierung entworfen wurde. Um die folgenden Ontologien zu entwerfen wurde Protégé verwendet und das Ergebnis anschließend in WebVOWL visualisiert. \newline
-Eine einfache Ontologie für die Testfälle von der Berechtigungsvergabe könnte so aussehen:\\
+Um zu verstehen, wie Produkttesten in eine Ontologie integriert werden kann, wird anhand des Beispiels des BAYOOSOFT Access Managers eine Ontologie schrittweise aufgebaut. Die Testfälle wurde bereits im Rahmen des Praxisprojekts ermittelt und werden jetzt als Grundlage für die Ontologie verwendet. Die Ontologie wurde in Protégé entworfen und mit webVOWL visualisiert. \newline
+In folgendem Beispiel werden Funktion und Testfälle des Verwaltens von Berechtigungen zunächst stark einfacht modelliert:\\
 
 \begin{center}
     \includegraphics[width=1\textwidth]{Thesis/Images/OntologySmall.png}        
 \end{center}
 
-In dieser Ontologie werden stark vereinfacht die Funktion des Vergebens von Zugriffsrechten auf Ordnern zusammengefasst. Verwendet man die Ontologie nun auf spezielle Ausprägungen mit den für das System bekannten Daten (Zugriffsrechte umfassen Lese- und Schreibrechte) und Testdaten wie verschiedene Nutzer oder Ordner, ergeben sich verschiedene Testfälle, die die hier dargestellte Funktionalität abdecken. So hat z.B. Nutzer A Schreibrechte auf Ordner Y, aber hat keinen Zugriff auf Ordner Z. \\
-
-Um nun weitere Aspekte des Produkts und seiner Umgebung zu berücksichtigen, wird die Ontologie um einige Knoten und Kanten erweitert. \\
+Die Ontologie fasst die Funktion des Berechtigungsmanagements in 3 Klassen mit 2 Beziehungen zusammen. 
+%%%%%%%%%%%%%%%%%%YIKES
+Verwendet man die Ontologie nun auf spezielle Ausprägungen mit den für das System bekannten Daten (Zugriffsrechte umfassen Lese- und Schreibrechte) und Testdaten wie verschiedene Nutzer oder Ordner, ergeben sich verschiedene Testfälle, die die hier dargestellte Funktionalität abdecken. So hat z.B. Nutzer A Schreibrechte auf Ordner Y, aber hat keinen Zugriff auf Ordner. \\
+%%%%%%%%%%%%%%%%%%YIKES
+Die gezeigte Ontologie umfasst offensichtlicherweise nicht alle Aspekte des Produkts und seiner Berechtigungsverwaltung. Im nächsten Schritt wird die Ontologie erweitert, um Sonderfälle und technische Einschränkungen zu berücksichtigen.\\
 
 \begin{center}
     \includegraphics[width=1\textwidth]{Thesis/Images/OntologyBig.png}
 \end{center}
 
-Es werden nun zusätzlich noch Domänen der Nutzer und der Ordner bzw. Server berücksichtigt sowie der Domainmode, was einige Einschränkungen mit sich bringt, wenn es daran geht die Ontologie mit bekannten Daten zu verwenden. So kann auf einem Ordner, der sich auf einem Server mit Singledomain Domainmode befindet, kein User aus einer anderen Domäne berechtigt sein. Dadurch können jetzt wesentlich mehr Testfälle dargestellt werden. 
+Durch diese Erweiterungen werden in der Ontologie noch Domänen einbezogen, auf denen sich User und Ordner befinden, sowie zusätzlich Domainmodes, die jeweils entsprechend der Domäne regeln, ob ein Nutzer berechtigt werden kann oder nicht. Dadurch wird sowohl das System realitätsnaher dargestellt, als auch mehr Testfälle einbezogen.
