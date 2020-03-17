@@ -1,0 +1,37 @@
+\chapter{Semantische Suche}
+Im nächsten Schritt soll untersucht werden, ob eine semantische Suche auf Grundlage der soeben definierten Ontologie auf die Testfälle bezogen umsetzbar ist. Dazu wird zunächst geklärt, wie sich semantische Suche definiert und welche Aspekte bei der Beurteilung berücksichtigt werden sollten.
+
+\section{Definition}
+Die semantische Suche beschreibt das Durchstöbern von Informationssammlung auf Grundlage von Beziehungen, Kenntnissen und Bedeutung über den jeweils gesuchten Begriff. Im Gegensatz zur Stichwort-Suche, die lediglich Schlagwörter entdecken kann, wenn diese buchstäblich vorhanden sind, berücksichtigt die semantische Suche beispielsweise Synonyme oder andere Kontexte, die dem Suchbegriff zugeordnet werden können.\newline
+Grundlage der semantischen Suche ist oftmals eine Ontologie, die es ermöglicht, einen Überblick über Beziehung und Bedeutung eines Begriffs einem bestimmten Kontext zu erfassen. Mit Hilfe der Metadaten, die sich in einer Ontologie befinden, kann das Suchen von Informationen auf verschiedene Weise unterstützt werden.
+\cite{Sack.2010}
+
+\section{Information Retrieval}
+In dem Werk \glqq Semantische Suche\grqq{} von Harald Sack\cite{Sack.2010} werden vier Arten der Information Retrieval Unterstützung genannt und näher untersucht. Diese umfassen \glqq Query String Refinement\grqq{}, \glqq Inference\grqq{}, \glqq Cross Referencing\grqq{} und \glqq Explorative Suche\grqq{}, die im Folgenden jeweils näher erläutert werden.
+
+\subsection*{Query String Refinement}
+Query String Refinement beschreibt das Präzisieren einer Suchanfrage durch das Erweitern um Begriffe. Mit Hilfe einer zugrundeliegenden Ontologie kann damit das Ergebnis thematisch eingeschränkt werden, da innerhalb der Ontologie z.B. mehrfach das Literal \glqq Golf\grqq{} besteht, aber durch das Erweitern um \glqq Pkw\grqq{} weitere Beziehungen im Bereich des Sports ausgeschlossen werden und somit nur noch die gewünschte Ergebnismenge vorhanden ist.
+
+\subsection*{Inference}
+Bei Inference geht es um die implizierten Verknüpfungen zwischen Begriffen, die entstehen, wenn Knoten innerhalb der Ontologie über Beziehungen z.B. transitiv verbunden sind. Beispielsweise gehört eine Instanz explizit einer Unterklasse an, wird sie implizit auch der Oberklasse angehören. Ist beispielsweise \glqq Max\grqq{} eine Instanz der Klasse \glqq Vater\grqq{}, die wiederum Unterklasse von \glqq Mann\grqq{} ist, lässt sich schließen, das \glqq Max\grqq{} auch der Klasse \glqq Mann\grqq{} angehört.
+
+\subsection*{Cross Referencing}
+Unter Cross Referencing wird das Herstellen von Querverweisen und Assoziationen verstanden. Ähnlich wie bei Inference werden hier Rückschlüsse über die Zugehörigkeit anderer Klassen zum Suchbegriff gezogen. So ist zum Beispiel bei der Suche nach \glqq Hochschule Darmstadt\grqq{} eine mögliche Assoziation \glqq Technische Universität Darmstadt\grqq{}, da es sich bei beiden Einrichtungen um eine akademische Bildungsstätte innerhalb der selben Stadt handelt. Wenn also Klassen wie \glqq Ort\grqq{} oder \glqq Bildungseinrichtung\grqq{} existieren, die beiden Instanzen darüber verknüpft werden.
+
+\subsection*{Explorative Suche}
+Die explorative Suche orientiert sich weniger an üblichen technischen Sucherergebnissen wie der Volltextsuche, sondern am \glqq Stöbern\grqq{}. Die Idee ist, dass durch Angabe eines ungefähren Themas bereits Ergebnisse ausgegeben werden, die zwar nicht so präzise wie bei anderen Verfahren sind, aber ohne Kenntisse über dem gesuchten Themenbereich erlangt werden können. Durch Assoziationen und Implikationen aus der Vielzahl der Klassen innerhalb einer Ontologien können weitere Vorschläge erfasst werden, durch die \glqq gestöbert\grqq{} werden kann und dadurch mehr Informationen ermittelt werden können. Ein ähnliches Prinzip kann auf Streaming-Plattformen beobachtet werden. Hier werden breit gefächerte Vorschläge anhand von Assoziationen zwischen Filmen und Serien (z.B. Genre, Schauspieler, Stil usw.) geboten, durch die \glqq gestöbert\grqq{} wird, was beispielsweise dabei hilft, den gewünschten Film zu finden, ohne bestimmte Begriffe angeben zu müssen.
+          
+\section{Anwendung}
+Um zu überprüfen, ob und wie die semantische Suche in der Testfallontologie des Access Managers verwendet werden kann, werden die zuvor genannten vier Arten der \glqq Information Retrieval\grqq{} Unterstützung mit der zuvor erstellten Ontologie angewendet, um Testfälle zu finden.
+
+\subsection*{Query String Refinement}
+Wird nach Testfällen gesucht, in denen ein Schreibrecht gesetzt oder entzogen wird, ist die Ergebnismenge zunächst sehr groß. Durch eine präzisere Suchanfrage ist es möglich, beispielweise zusätzlich zu Schreibrecht noch nach bestimmten Domänenmodi, oder nach UI oder Active Directory (Zugriffsverwaltung von Windows) Tests zu suchen. Durch die Beziehungen in der Ontologie können dann Testfälle, bei denen sich Ordner auf Singledomain Servern befinden und bei denen ein Schreibrecht gesetzt wird als Ergebnis geliefert werden, da zu jedem Ordner ein Server gehört, dem ein bestimmter Domainmode zugewiesen ist.
+
+\subsection*{Inference}
+Ähnlich wie bei dem Beispiel für "Query String Refinement" gelten für die Testfälle durch das Netz an Beziehungen einige Implikationen. Ein Rightsfolder ist ein Ordner und ein Ordner liegt auf einem Server. Dadurch gilt die Implikation, dass ein Rightsfolder auf einem Server liegt und für ihn entsprechend die gleichen Bedingungen für DomainModes gelten, die auch auf den Server zutreffen würden. Diese Informationen können bei der Suche berücksichtigt werden, ohne dass explizite Schlüssen aufgebaut werden müssen, wie es bei einer Datenbank der Fall wäre. 
+
+\subsection*{Cross Referencing}
+Assoziationen lassen sich bei den Testfällen zum Beispiel bei Profiltests und Usertests sehen. Beide Testarten sind Berechtigungsmanagement Tests und betreffen beide das Active Directory. Bei einer Suche nach einem Profiltest können ähnliche Tests aus den Usertests in der Ergebnismenge enthalten sein, da diese z.B. ein sehr ähnliches Verhalten überprüfen und vielleicht sogar voneinander abhängen.
+
+\subsection*{Explorative Suche}
+\glqq Vorgeschlagene\grqq{} Testfälle wirken zunächst ungewöhnlich, könnten aber durchaus einen praktischen Nutzen entwickeln. Wenn ein Verantwortlicher für Produktqualität sich einen Überblick verschaffen möchte, welche Testfälle es bereits gibt, oder welche Features allgemein getestet werden, kann der Verantwortliche durch die Ergebnismenge stöbern, in denen Tests nach Überkategorien sortiert sind, zum Beispiel Profilmanagement und Berechtigungsmanagement, die durch die Implikationen und Assoziationen aus der Ontologie ergeben. Der Verantwortliche für Produktqualität kann so zum Beispiel herausfinden, welche Domainmodes es gibt, wie diese berücksichtigt werden usw., ohne sich ausgiebig mit dem Produkt auseinander zu setzen bevor er die Suche starten kann. Diese Form der Suche entfaltet ihren vollen Nutzen vermutlich bei einer umfassenden Produktabdeckung, also nicht nur kleinen konkreten Testfallbereich, sondern einer Vielzahl an Features und Testfällen, da hier das \glqq stöbern\grqq{} mehr Kategorien und Inhalt bietet, nach dem sortiert werden kann.
